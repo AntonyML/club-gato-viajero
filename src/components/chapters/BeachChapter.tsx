@@ -194,22 +194,22 @@ export function BeachChapter({ beach, onUnlock }: Props) {
           className="absolute left-4 top-1/2 z-20 w-[88%] max-w-sm -translate-y-1/2 sm:left-8 md:left-16"
         >
           <div className="story-card p-6 sm:p-7">
-            <p className="font-display text-xs uppercase tracking-[0.2em] text-cocoa/60 sm:text-sm">
+            <p className="font-display text-xs uppercase tracking-[0.2em] text-[var(--color-text-secondary)] sm:text-sm">
               Playa {beach.id} · {moodLabel(beach.mood)}
             </p>
             <h2
               id={`playa-${beach.id}-title`}
-              className="mt-1 font-display text-2xl font-semibold leading-tight text-cocoa sm:text-3xl"
+              className="mt-1 font-display text-2xl font-semibold leading-tight text-[var(--color-text-primary)] sm:text-3xl"
             >
               {beach.title}
             </h2>
-            <p className="mt-3 font-display text-base italic text-coral-tropical sm:text-lg">
+            <p className="mt-3 font-display text-base italic text-[var(--color-accent)] sm:text-lg">
               {beach.postcard}
             </p>
-            <p className="mt-4 text-base leading-relaxed text-cocoa/80 sm:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-[var(--color-text-primary)]/80 sm:text-lg">
               {beach.detail}
             </p>
-            <p className="mt-4 text-sm uppercase tracking-[0.18em] text-cocoa/50">
+            <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[var(--color-text-secondary)]">
               {beach.name}
             </p>
             <button
@@ -218,7 +218,7 @@ export function BeachChapter({ beach, onUnlock }: Props) {
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
               aria-label={`Reservar tour en ${beach.name}`}
-              className="mt-5 w-full rounded-full bg-coral-tropical px-5 py-2.5 font-display text-sm font-bold text-cream transition-all duration-200 hover:bg-coral-tropical/80 hover:shadow-md active:scale-[0.97]"
+              className="mt-5 w-full rounded-full bg-[var(--color-teal-mid)] px-5 py-2.5 font-display text-sm font-bold text-[var(--color-text-on-dark)] transition-all duration-200 hover:bg-[var(--color-accent-hover)] hover:shadow-md active:scale-[0.97]"
             >
               Reservar este tour
             </button>

@@ -10,7 +10,7 @@ type Props = {
 export function SpeechBubble({ text, tail = "left", className }: Props) {
   return (
     <div className={`relative inline-block max-w-[280px] ${className ?? ""}`}>
-      <div className="story-card rounded-2xl px-4 py-3 text-sm font-medium leading-snug text-cocoa sm:text-base">
+      <div className="story-card rounded-2xl px-4 py-3 text-sm font-medium leading-snug text-[var(--color-text-primary)] sm:text-base">
         {text}
       </div>
       {tail === "left" ? (
@@ -22,8 +22,8 @@ export function SpeechBubble({ text, tail = "left", className }: Props) {
         >
           <path
             d="M0 0 L20 0 L8 16 Z"
-            fill="#fffdf6"
-            stroke="rgba(232,201,138,0.55)"
+            fill="var(--color-bg-primary)"
+            stroke="var(--color-border)"
             strokeWidth="1"
           />
         </svg>
@@ -36,8 +36,8 @@ export function SpeechBubble({ text, tail = "left", className }: Props) {
         >
           <path
             d="M4 0 L24 0 L16 16 Z"
-            fill="#fffdf6"
-            stroke="rgba(232,201,138,0.55)"
+            fill="var(--color-bg-primary)"
+            stroke="var(--color-border)"
             strokeWidth="1"
           />
         </svg>

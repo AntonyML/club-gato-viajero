@@ -1,38 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-  --color-sky-pastel: #bfe0f0;
-  --color-sky-pastel-soft: #d8ecf5;
-  --color-rose-pastel: #f7c8c8;
-  --color-rose-pastel-soft: #fbdede;
-  --color-sand: #f7e7c8;
-  --color-sand-soft: #fbf2dc;
-  --color-turquoise-soft: #a9e0d4;
-  --color-coral-tropical: #f3a48f;
-  --color-gold-soft: #e8c98a;
-  --color-deep-sea: #5fb4c4;
-  --color-deep-sea-soft: #88c8d3;
-  --color-cocoa: #6b4a3a;
-  --color-palm: #6fa67a;
-  --color-palm-dark: #4f7d59;
-  --color-ink: #4a3a30;
-  --color-cream: #fff8ec;
+  --color-teal-deep: #026f73;
+  --color-teal-mid: #03989e;
+  --color-teal-light: #7ebdbf;
+  --color-blush: #f5c7b3;
+  --color-sand: #d1b29d;
 
   --font-display: var(--font-fraunces), "Georgia", serif;
   --font-body: var(--font-nunito), "Quicksand", system-ui, sans-serif;
 
-  --shadow-soft: 0 10px 30px -10px rgba(74, 58, 48, 0.18);
-  --shadow-card: 0 20px 50px -20px rgba(74, 58, 48, 0.25);
+  --shadow-soft: 0 10px 30px -10px rgba(2, 111, 115, 0.15);
+  --shadow-card: 0 20px 50px -20px rgba(2, 111, 115, 0.2);
 }
 
 :root {
   color-scheme: light;
+
+  --color-bg-primary: #ffffff;
+  --color-bg-section: color-mix(in srgb, #7ebdbf 12%, white);
+  --color-bg-dark: #026f73;
+  --color-text-primary: #026f73;
+  --color-text-secondary: #d1b29d;
+  --color-text-on-dark: #ffffff;
+  --color-accent: #03989e;
+  --color-accent-hover: #026f73;
+  --color-focus-ring: #f5c7b3;
+  --color-border: color-mix(in srgb, #7ebdbf 35%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #022e30;
+    --color-bg-section: #033a3d;
+    --color-bg-dark: #011d1e;
+    --color-text-primary: #f5c7b3;
+    --color-text-secondary: #7ebdbf;
+    --color-text-on-dark: #ffffff;
+    --color-accent: #7ebdbf;
+    --color-accent-hover: #03989e;
+    --color-focus-ring: #f5c7b3;
+    --color-border: color-mix(in srgb, #7ebdbf 20%, transparent);
+  }
 }
 
 html,
 body {
-  background: var(--color-cream);
-  color: var(--color-ink);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -40,6 +55,13 @@ body {
 
 body {
   overflow-x: hidden;
+}
+
+a {
+  color: var(--color-accent);
+}
+a:hover {
+  color: var(--color-accent-hover);
 }
 
 html.lenis,
@@ -69,16 +91,16 @@ html.lenis body {
 }
 
 ::selection {
-  background: var(--color-rose-pastel);
-  color: var(--color-ink);
+  background: var(--color-blush);
+  color: var(--color-teal-deep);
 }
 
 /* Subtle paper texture feel using radial gradient */
 .paper-bg {
-  background-color: var(--color-cream);
+  background-color: var(--color-bg-primary);
   background-image:
-    radial-gradient(rgba(74, 58, 48, 0.045) 1px, transparent 1px),
-    radial-gradient(rgba(74, 58, 48, 0.03) 1px, transparent 1px);
+    radial-gradient(rgba(2, 111, 115, 0.045) 1px, transparent 1px),
+    radial-gradient(rgba(2, 111, 115, 0.03) 1px, transparent 1px);
   background-size: 24px 24px, 36px 36px;
   background-position: 0 0, 12px 18px;
 }
@@ -153,8 +175,8 @@ html.lenis body {
 
 /* Soft, storybook-style card */
 .story-card {
-  background: linear-gradient(180deg, #fffdf6 0%, #fdf6e3 100%);
-  border: 1px solid rgba(232, 201, 138, 0.55);
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
   border-radius: 18px;
 }

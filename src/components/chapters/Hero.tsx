@@ -111,7 +111,7 @@ export function Hero() {
               <Tag
                 key={line.id}
                 data-line
-                className="font-display text-3xl font-medium leading-tight text-cocoa sm:text-5xl"
+                className="font-display text-3xl font-medium leading-tight text-[var(--color-text-primary)] sm:text-5xl"
               >
                 {line.text}
               </Tag>
@@ -121,7 +121,7 @@ export function Hero() {
         <button
           ref={ctaRef}
           onClick={onCta}
-          className="mt-10 inline-flex items-center gap-2 rounded-full border border-sand bg-cream/95 px-7 py-3 font-display text-base font-semibold text-cocoa shadow-soft transition hover:scale-[1.02] hover:bg-rose-pastel-soft sm:text-lg"
+          className="mt-10 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-primary)]/95 px-7 py-3 font-display text-base font-semibold text-[var(--color-text-primary)] shadow-soft transition hover:scale-[1.02] hover:bg-[var(--color-blush)] sm:text-lg"
         >
           <span>Comenzar la aventura</span>
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -138,7 +138,7 @@ export function Hero() {
 
       {/* Hint inferior */}
       <div className="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center sm:bottom-6">
-        <span className="rounded-full bg-cream/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-cocoa/60 backdrop-blur-sm">
+        <span className="rounded-full bg-[var(--color-bg-primary)]/70 px-3 py-1 text-xs uppercase tracking-[0.18em] text-[var(--color-text-secondary)] backdrop-blur-sm sm:text-sm">
           Desliza para comenzar
         </span>
       </div>

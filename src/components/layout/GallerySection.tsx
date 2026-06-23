@@ -59,10 +59,10 @@ export default function GallerySection() {
               <Lottie animationData={heartAnim} loop autoplay aria-hidden={true} />
             </div>
           ) : null}
-          <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold text-[var(--color-text-primary)] sm:text-4xl">
             Galería del Viaje
           </h2>
-          <p className="mt-2 font-body text-base text-ink/60">
+          <p className="mt-2 font-body text-base text-[var(--color-text-secondary)]">
             Momentos capturados por Melvin Ramón en sus andanzas playeras.
           </p>
         </div>
@@ -83,8 +83,8 @@ export default function GallerySection() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/60 to-transparent p-4 pt-12">
-                <span className="font-display text-sm font-semibold text-cream">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--color-teal-deep)]/60 to-transparent p-4 pt-12">
+                <span className="font-display text-sm font-semibold text-[var(--color-text-on-dark)]">
                   {item.label}
                 </span>
               </div>

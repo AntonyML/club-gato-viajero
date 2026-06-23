@@ -21,11 +21,11 @@ const LEAF_COLORS = [
 ];
 
 const BG_GRADIENTS = [
-  "from-sky-pastel/40 to-sand-soft/30",
-  "from-rose-pastel/30 to-sky-pastel-soft/40",
-  "from-turquoise-soft/30 to-rose-pastel/20",
-  "from-gold-soft/30 to-sky-pastel/40",
-  "from-deep-sea-soft/20 to-sand/30",
+  "from-[var(--color-teal-light)]/30 to-[var(--color-teal-mid)]/20",
+  "from-[var(--color-blush)]/30 to-[var(--color-teal-light)]/20",
+  "from-[var(--color-teal-light)]/20 to-[var(--color-blush)]/20",
+  "from-[var(--color-sand)]/30 to-[var(--color-teal-light)]/20",
+  "from-[var(--color-teal-mid)]/20 to-[var(--color-sand)]/20",
 ];
 
 export default function SwingTransition({ fromBeach, toBeach, index }: Props) {
@@ -123,12 +123,12 @@ export default function SwingTransition({ fromBeach, toBeach, index }: Props) {
           </div>
         </div>
 
-        <div className="mt-12 text-center font-display text-2xl text-ink/40">
+        <div className="mt-12 text-center font-display text-2xl text-[var(--color-text-secondary)]/60">
           <span className="inline-block animate-pulse">✦</span>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-0 right-0 text-center font-body text-xs text-ink/20">
+      <div className="absolute bottom-8 left-0 right-0 text-center font-body text-xs text-[var(--color-text-secondary)]/40">
         {fromBeach.name} → {toBeach.name}
       </div>
     </section>

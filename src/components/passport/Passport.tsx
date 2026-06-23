@@ -34,7 +34,7 @@ export function Passport({ unlocked }: Props) {
 
   return (
     <div
-      className="pointer-events-none fixed right-3 top-3 z-40 sm:right-5 sm:top-5"
+      className="pointer-events-none fixed right-3 top-20 z-40 sm:right-5 sm:top-24"
       aria-live="polite"
     >
       <div
@@ -42,10 +42,10 @@ export function Passport({ unlocked }: Props) {
         className="pointer-events-auto story-card flex items-center gap-3 rounded-2xl px-3 py-2 sm:gap-4 sm:px-4 sm:py-3"
       >
         <div className="flex flex-col leading-tight">
-          <span className="font-display text-[11px] uppercase tracking-[0.18em] text-cocoa/70 sm:text-xs">
+          <span className="font-display text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-secondary)] sm:text-xs">
             Pasaporte
           </span>
-          <span className="font-display text-sm font-semibold text-cocoa sm:text-base">
+          <span className="font-display text-sm font-semibold text-[var(--color-text-primary)] sm:text-base">
             {unlocked}/{TOTAL_BEACHES} sellos
           </span>
         </div>
@@ -58,8 +58,8 @@ export function Passport({ unlocked }: Props) {
                 data-stamp-slot={i + 1}
                 className={`stamp-slot relative grid h-6 w-6 place-items-center rounded-md border transition-colors sm:h-7 sm:w-7 ${
                   isUnlocked
-                    ? "border-rose-pastel/70 bg-rose-pastel-soft/60"
-                    : "border-sand bg-cream"
+                    ? "border-[var(--color-blush)]/70 bg-[var(--color-blush)]/30"
+                    : "border-[var(--color-border)] bg-[var(--color-bg-primary)]"
                 }`}
                 aria-label={isUnlocked ? `Sello ${i + 1} desbloqueado` : `Sello ${i + 1} pendiente`}
               >
@@ -68,7 +68,7 @@ export function Passport({ unlocked }: Props) {
                     viewBox="0 0 24 24"
                     className="check-icon h-3.5 w-3.5 sm:h-4 sm:w-4"
                     fill="none"
-                    stroke="#c46a55"
+                    stroke="var(--color-accent)"
                     strokeWidth="2.4"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -76,7 +76,7 @@ export function Passport({ unlocked }: Props) {
                     <path d="M5 12.5l4.5 4.5L19 7" />
                   </svg>
                 ) : (
-                  <span className="font-display text-[10px] text-cocoa/30">·</span>
+                  <span className="font-display text-[10px] text-[var(--color-text-secondary)]/30">·</span>
                 )}
               </div>
             );

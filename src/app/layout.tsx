@@ -36,7 +36,7 @@ export default function RootLayout({
     >
       <body className="min-h-full paper-bg font-body text-ink antialiased">
         <Header />
-        <main className="pt-16">{children}</main>
+        <main className="pt-16 md:pt-20">{children}</main>
         <Footer />
       </body>
     </html>

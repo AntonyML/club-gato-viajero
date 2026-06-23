@@ -16,7 +16,7 @@ function Journey() {
   const [unlocked, setUnlocked] = useState(0);
 
   return (
-    <main className="relative">
+    <div className="relative">
       <Passport unlocked={unlocked} />
       <TravelProgressBar />
 
@@ -47,7 +47,7 @@ function Journey() {
       <ContactSection />
 
       <Outro />
-    </main>
+    </div>
   );
 }
 
