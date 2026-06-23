@@ -27,15 +27,15 @@ export type Beach = {
 export const BEACHES: Beach[] = [
   {
     id: 1,
-    name: "Playa Caleta Azul",
-    title: "El primer descubrimiento",
+    name: "Punta Uva",
+    title: "La joya escondida",
     vibe: "asombro",
-    postcard: "Donde el mar se vuelve cristal.",
+    postcard: "Donde la selva besa el mar.",
     stitchSays: [
-      "Podría quedarme aquí todo el día.",
+      "Esta playa es un sueño… ¿puedo quedarme?",
       "Prometo que esta es la última foto… quizás.",
     ],
-    detail: "Arenas blancas, agua turquesa y un silencio que se siente como un secreto.",
+    detail: "Arena blanca, aguas turquesa y un arrecife de coral que la convierte en la playa más fotografiada del Caribe costarricense.",
     mood: "morning",
     palette: {
       skyTop: "#bfe0f0",
@@ -48,15 +48,15 @@ export const BEACHES: Beach[] = [
   },
   {
     id: 2,
-    name: "Playa Punta Coco",
-    title: "El coco perdido",
+    name: "Manzanillo",
+    title: "El refugio natural",
     vibe: "diversion",
-    postcard: "Una cocada con vista al mar.",
+    postcard: "Donde el bosque llega hasta la orilla.",
     stitchSays: [
-      "Creo que ese coco es mío.",
+      "¡Un refugio de vida silvestre!",
       "Vale, necesito una siesta urgente.",
     ],
-    detail: "Una palmera generosa, sombra fresca y cocos rodando con la brisa.",
+    detail: "Un paraíso escondido dentro del Refugio Nacional Gandoca-Manzanillo, donde el río se encuentra con el mar.",
     mood: "noon",
     palette: {
       skyTop: "#a4d7ee",
@@ -69,15 +69,15 @@ export const BEACHES: Beach[] = [
   },
   {
     id: 3,
-    name: "Playa Manzanillo Travieso",
-    title: "Los cangrejos traviesos",
-    vibe: "humor",
-    postcard: "Pequeños arquitectos de arena.",
+    name: "Cahuita",
+    title: "El tesoro nacional",
+    vibe: "calma",
+    postcard: "Arena blanca y perezosos en los árboles.",
     stitchSays: [
-      "¡Eh, esperen, no se vayan!",
-      "Por qué los cangrejos siempre ganan.",
+      "Creo que encontré mi lugar favorito.",
+      "Un momento más… por favor.",
     ],
-    detail: "Cangrejos rápidos como relámpagos y castillos de arena que nunca sobreviven.",
+    detail: "El Parque Nacional Cahuita protege la playa más hermosa del Caribe, con arrecifes de coral y fauna que llega hasta la orilla.",
     mood: "afternoon",
     palette: {
       skyTop: "#bcdff0",
@@ -90,15 +90,15 @@ export const BEACHES: Beach[] = [
   },
   {
     id: 4,
-    name: "Playa Atardecer Dorado",
-    title: "El gran atardecer",
-    vibe: "calma",
-    postcard: "El cielo se pinta lento.",
+    name: "Cocles",
+    title: "El alma surfista",
+    vibe: "humor",
+    postcard: "Donde las olas cuentan historias.",
     stitchSays: [
-      "Creo que encontré mi lugar favorito.",
-      "Un momento más… por favor.",
+      "¡Esas olas son enormes!",
+      "Por qué los surfistas siempre ganan.",
     ],
-    detail: "Naranjas, rosas y el sonido suave del agua al retroceder.",
+    detail: "La playa favorita de surfistas en Puerto Viejo, con palmeras inclinadas por el viento y un ambiente Caribeño único.",
     mood: "sunset",
     palette: {
       skyTop: "#f7c8c8",
@@ -111,15 +111,15 @@ export const BEACHES: Beach[] = [
   },
   {
     id: 5,
-    name: "Playa Bahía Favorita",
-    title: "La favorita de Stitch",
+    name: "Playa Negra",
+    title: "La mística del Caribe",
     vibe: "recompensa",
-    postcard: "Donde Stitch decide quedarse un ratito más.",
+    postcard: "Arena oscura, magia pura.",
     stitchSays: [
       "No le digas a nadie, pero… ya es mi casa.",
       "Mañana partimos. Hoy no.",
     ],
-    detail: "La playa más bonita del Caribe costarricense, según Stitch.",
+    detail: "Su arena volcánica negra contrasta con el azul intenso del mar, creando uno de los espectáculos naturales más únicos de Costa Rica.",
     mood: "magic",
     palette: {
       skyTop: "#cfe6f5",

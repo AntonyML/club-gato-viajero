@@ -8,33 +8,33 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const GALLERY = [
   {
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    alt: "Playa Caribe con palmeras",
-    label: "Playa Caleta Azul",
+    src: "https://images.unsplash.com/photo-1542317199-48b82fbb0392",
+    alt: "Vista aérea de Punta Uva, Puerto Viejo",
+    label: "Punta Uva",
   },
   {
-    src: "https://images.unsplash.com/photo-1519046904884-53103b34b689",
-    alt: "Arena blanca y mar turquesa",
-    label: "Playa Punta Coco",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1537956965359-7573183d7f1f",
-    alt: "Cangrejo en la arena",
-    label: "Playa Manzanillo Travieso",
+    src: "https://images.unsplash.com/photo-1723884772542-faf103fd1b99",
+    alt: "Playa rodeada de selva tropical",
+    label: "Manzanillo",
   },
   {
     src: "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6",
-    alt: "Atardecer en el Caribe",
-    label: "Playa Atardecer Dorado",
+    alt: "Atardecer en el Caribe costarricense",
+    label: "Cahuita",
   },
   {
-    src: "https://images.unsplash.com/photo-1540202404-a2f29016b523",
-    alt: "Bahía escondida",
-    label: "Playa Bahía Favorita",
+    src: "https://images.unsplash.com/photo-1650033756746-3ec5afdd2689",
+    alt: "Olas rompiendo en la costa caribeña",
+    label: "Cocles",
   },
   {
-    src: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1",
-    alt: "Aventura en la playa",
+    src: "https://images.unsplash.com/photo-1580182019279-9c9a88350737",
+    alt: "Atardecer en Tortuguero, Limón",
+    label: "Playa Negra",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    alt: "Palmeras y mar Caribe",
     label: "Tours con Melvin Ramón",
   },
 ];
@@ -73,7 +73,7 @@ export default function GallerySection() {
               key={i}
               className="group relative overflow-hidden rounded-2xl shadow-soft transition-all duration-500 hover:shadow-card"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[16/9] sm:aspect-[4/3] overflow-hidden">
                 <Image
                   src={item.src}
                   alt={item.alt}
