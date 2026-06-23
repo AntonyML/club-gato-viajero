@@ -46,7 +46,7 @@ export default function ContactSection() {
         {submitted && doneLoaded ? (
           <div className="story-card flex flex-col items-center py-16 text-center">
             <div className="mb-6 h-24 w-24">
-              <Lottie animationData={doneAnim} loop={false} autoplay />
+              <Lottie animationData={doneAnim} loop={false} autoplay aria-hidden={true} />
             </div>
             <h3 className="font-display text-2xl font-semibold text-cocoa">
               ¡Gracias por tu reserva!

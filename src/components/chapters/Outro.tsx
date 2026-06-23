@@ -46,7 +46,7 @@ export function Outro() {
       <p data-fade className="font-display text-2xl font-semibold text-cocoa sm:text-3xl">
         {SLOGAN.text}
       </p>
-      <p data-fade className="mt-3 max-w-md text-sm text-cocoa/70 sm:text-base">
+      <p data-fade className="mt-3 max-w-md text-base text-cocoa/70 sm:text-lg">
         Has acompañado a Melvin Ramón por {TOTAL_BEACHES} arenas distintas.
         Cada sello es un secreto que ahora también es tuyo.
       </p>

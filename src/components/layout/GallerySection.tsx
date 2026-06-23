@@ -56,13 +56,13 @@ export default function GallerySection() {
         <div className="mb-12 text-center">
           {heartLoaded ? (
             <div className="mx-auto mb-4 w-16 opacity-40">
-              <Lottie animationData={heartAnim} loop autoplay />
+              <Lottie animationData={heartAnim} loop autoplay aria-hidden={true} />
             </div>
           ) : null}
           <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
             Galería del Viaje
           </h2>
-          <p className="mt-2 font-body text-sm text-ink/50">
+          <p className="mt-2 font-body text-base text-ink/60">
             Momentos capturados por Melvin Ramón en sus andanzas playeras.
           </p>
         </div>

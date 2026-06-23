@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { getGsap } from "@/lib/gsap";
 import { prefersReducedMotion } from "@/lib/motion";
 import type { Beach } from "@/data/beaches";
+import { Melvin } from "@/components/stitch/Melvin";
 
 type Props = {
   fromBeach: Beach;
@@ -97,12 +98,12 @@ export default function SwingTransition({ fromBeach, toBeach, index }: Props) {
       <div className="relative flex flex-col items-center">
         <div
           ref={swingRef}
-          className="flex flex-col items-center"
-          style={{ transformOrigin: "50% -80px" }}
+          className="flex w-full max-w-[200px] flex-col items-center md:max-w-[280px]"
+          style={{ transformOrigin: "50% -80px", willChange: "transform" }}
         >
           <svg
             viewBox="0 0 20 140"
-            className="h-48 w-4"
+            className="h-48 w-4 md:h-64 md:w-6"
             aria-hidden
           >
             <path
@@ -117,26 +118,9 @@ export default function SwingTransition({ fromBeach, toBeach, index }: Props) {
             <ellipse cx="11" cy="105" rx="5" ry="2.5" fill={leafColor} opacity="0.35" transform="rotate(15 11 105)" />
           </svg>
 
-          <svg
-            viewBox="0 0 40 40"
-            className="h-12 w-12 -mt-6"
-            aria-hidden
-          >
-            <ellipse cx="20" cy="22" rx="16" ry="14" fill="#5a3d2e" />
-            <ellipse cx="12" cy="32" rx="8" ry="6" fill="#5a3d2e" />
-            <ellipse cx="28" cy="32" rx="8" ry="6" fill="#5a3d2e" />
-            <ellipse cx="14" cy="30" rx="6" ry="4" fill="#3a2a24" />
-            <ellipse cx="26" cy="30" rx="6" ry="4" fill="#3a2a24" />
-            <ellipse cx="20" cy="14" rx="12" ry="11" fill="#5a3d2e" />
-            <path d="M12,8 L14,2 L20,10 Z" fill="#5a3d2e" />
-            <path d="M28,8 L26,2 L20,10 Z" fill="#5a3d2e" />
-            <ellipse cx="16" cy="14" rx="2.5" ry="3" fill="#fff8ec" />
-            <ellipse cx="24" cy="14" rx="2.5" ry="3" fill="#fff8ec" />
-            <ellipse cx="16" cy="14.5" rx="1.5" ry="2" fill="#3a2a24" />
-            <ellipse cx="24" cy="14.5" rx="1.5" ry="2" fill="#3a2a24" />
-            <path d="M18.5,18 L21.5,18 L20,21 Z" fill="#f3a48f" />
-            <path d="M20,21 Q18,24 16.5,23 M20,21 Q22,24 23.5,23" stroke="#3a2a24" strokeWidth="0.5" fill="none" />
-          </svg>
+          <div className="-mt-6 md:-mt-8">
+            <Melvin state="idle" size={200} />
+          </div>
         </div>
 
         <div className="mt-12 text-center font-display text-2xl text-ink/40">

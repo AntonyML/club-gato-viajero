@@ -194,7 +194,7 @@ export function BeachChapter({ beach, onUnlock }: Props) {
           className="absolute left-4 top-1/2 z-20 w-[88%] max-w-sm -translate-y-1/2 sm:left-8 md:left-16"
         >
           <div className="story-card p-6 sm:p-7">
-            <p className="font-display text-[11px] uppercase tracking-[0.2em] text-cocoa/60">
+            <p className="font-display text-xs uppercase tracking-[0.2em] text-cocoa/60 sm:text-sm">
               Playa {beach.id} · {moodLabel(beach.mood)}
             </p>
             <h2
@@ -206,10 +206,10 @@ export function BeachChapter({ beach, onUnlock }: Props) {
             <p className="mt-3 font-display text-base italic text-coral-tropical sm:text-lg">
               {beach.postcard}
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-cocoa/80 sm:text-base">
+            <p className="mt-4 text-base leading-relaxed text-cocoa/80 sm:text-lg">
               {beach.detail}
             </p>
-            <p className="mt-4 text-xs uppercase tracking-[0.18em] text-cocoa/50">
+            <p className="mt-4 text-sm uppercase tracking-[0.18em] text-cocoa/50">
               {beach.name}
             </p>
             <button
@@ -217,6 +217,7 @@ export function BeachChapter({ beach, onUnlock }: Props) {
                 const el = document.querySelector<HTMLElement>("#reservas");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
+              aria-label={`Reservar tour en ${beach.name}`}
               className="mt-5 w-full rounded-full bg-coral-tropical px-5 py-2.5 font-display text-sm font-bold text-cream transition-all duration-200 hover:bg-coral-tropical/80 hover:shadow-md active:scale-[0.97]"
             >
               Reservar este tour

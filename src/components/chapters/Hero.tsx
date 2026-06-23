@@ -105,15 +105,18 @@ export function Hero() {
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
         <div ref={linesRef} className="flex max-w-2xl flex-col items-center gap-4">
-          {HERO_LINES.map((line) => (
-            <span
-              key={line.id}
-              data-line
-              className="font-display text-3xl font-medium leading-tight text-cocoa sm:text-5xl"
-            >
-              {line.text}
-            </span>
-          ))}
+          {HERO_LINES.map((line, i) => {
+            const Tag = i === 0 ? "h1" : "span";
+            return (
+              <Tag
+                key={line.id}
+                data-line
+                className="font-display text-3xl font-medium leading-tight text-cocoa sm:text-5xl"
+              >
+                {line.text}
+              </Tag>
+            );
+          })}
         </div>
         <button
           ref={ctaRef}

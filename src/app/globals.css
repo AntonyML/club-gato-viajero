@@ -145,6 +145,12 @@ html.lenis body {
   animation: stampDrop 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
+:focus-visible {
+  outline: 2px solid #f3a48f;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 /* Soft, storybook-style card */
 .story-card {
   background: linear-gradient(180deg, #fffdf6 0%, #fdf6e3 100%);

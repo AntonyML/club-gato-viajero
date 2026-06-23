@@ -34,7 +34,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <p className="mt-6 font-body text-xs text-ink/30">
+        <p className="mt-6 font-body text-sm text-ink/50">
           &copy; {new Date().getFullYear()} El Club del Gato Viajero &mdash; Melvin Ram&oacute;n.
           Hecho con sue&ntilde;os caribe&ntilde;os.
         </p>
