@@ -91,7 +91,7 @@ export function ScrollProvider({ children }: { children: ReactNode }) {
       setValue({ lenis, store });
     }, 0);
 
-    const refreshId = window.setTimeout(() => ST?.refresh(), 250);
+    const refreshId = window.setTimeout(() => ScrollTrigger?.refresh(), 250);
 
     return () => {
       window.clearTimeout(refreshId);

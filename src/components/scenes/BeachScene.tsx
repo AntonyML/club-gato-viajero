@@ -56,7 +56,7 @@ export function BeachScene({ beach, className }: Props) {
 
       {/* Clouds */}
       <g data-parallax="0.08" data-layer="clouds" className="drift-slow">
-        <Clouds mood={beach.mood} id={id} />
+        <Clouds mood={beach.mood} />
       </g>
 
       {/* Distant mountains / hills */}

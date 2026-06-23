@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import type { Beach } from "@/data/beaches";
 import { BeachScene } from "@/components/scenes/BeachScene";
-import { Stitch } from "@/components/stitch/Stitch";
+import { Melvin } from "@/components/stitch/Melvin";
 import { SpeechBubble } from "@/components/stitch/SpeechBubble";
 import { getGsap } from "@/lib/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,7 +16,7 @@ type Props = {
 
 const stateByVibe: Record<
   Beach["vibe"],
-  { stitch: Parameters<typeof Stitch>[0]["state"]; line: number }
+  { stitch: Parameters<typeof Melvin>[0]["state"]; line: number }
 > = {
   asombro: { stitch: "photo", line: 0 },
   diversion: { stitch: "look", line: 0 },
@@ -185,7 +185,7 @@ export function BeachChapter({ beach, onUnlock }: Props) {
           <span className="sr-only">
             <span ref={lineRef}>{activeLine}</span>
           </span>
-          <Stitch state={preset.stitch} size={180} facing="left" />
+          <Melvin state={preset.stitch} size={180} facing="left" />
         </div>
 
         {/* Narrative card on the left */}
@@ -212,6 +212,15 @@ export function BeachChapter({ beach, onUnlock }: Props) {
             <p className="mt-4 text-xs uppercase tracking-[0.18em] text-cocoa/50">
               {beach.name}
             </p>
+            <button
+              onClick={() => {
+                const el = document.querySelector<HTMLElement>("#reservas");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="mt-5 w-full rounded-full bg-coral-tropical px-5 py-2.5 font-display text-sm font-bold text-cream transition-all duration-200 hover:bg-coral-tropical/80 hover:shadow-md active:scale-[0.97]"
+            >
+              Reservar este tour
+            </button>
           </div>
         </div>
       </div>

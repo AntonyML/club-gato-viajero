@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Nunito } from "next/font/google";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -17,9 +19,9 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "El Club del Gato Viajero · Stitch y las 5 playas secretas",
+  title: "El Club del Gato Viajero · Melvin Ramón y las 5 playas secretas",
   description:
-    "Acompaña a Stitch, un gato curioso y aventurero, en un recorrido ilustrado por cinco playas secretas del Caribe costarricense.",
+    "Acompaña a Melvin Ramón, un gato curioso y aventurero, en un recorrido ilustrado por cinco playas secretas del Caribe costarricense. Tours guiados con la mejor mascota del Caribe.",
 };
 
 export default function RootLayout({
@@ -33,7 +35,9 @@ export default function RootLayout({
       className={`${fraunces.variable} ${nunito.variable} h-full`}
     >
       <body className="min-h-full paper-bg font-body text-ink antialiased">
-        {children}
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

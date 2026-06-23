@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { HERO_LINES } from "@/data/copy";
 import { HeroScene } from "@/components/scenes/HeroScene";
-import { Stitch } from "@/components/stitch/Stitch";
+import { Melvin } from "@/components/stitch/Melvin";
 import { getGsap } from "@/lib/gsap";
 import { prefersReducedMotion } from "@/lib/motion";
 
@@ -130,7 +130,7 @@ export function Hero() {
 
       {/* Stitch sobre la maleta, en la parte inferior derecha */}
       <div className="pointer-events-none absolute bottom-6 right-4 z-10 sm:bottom-10 sm:right-10">
-        <Stitch state="wave" size={200} facing="left" onSuitcase />
+        <Melvin state="wave" size={200} facing="left" onSuitcase />
       </div>
 
       {/* Hint inferior */}
