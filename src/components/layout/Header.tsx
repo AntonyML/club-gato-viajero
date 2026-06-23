@@ -51,7 +51,7 @@ export default function Header() {
               key={item.href}
               href={item.href}
               className={`font-body text-sm font-semibold transition-colors duration-200 hover:text-[var(--color-blush)] ${
-                scrolled ? "text-[var(--color-text-on-dark)]/70" : "text-[var(--color-text-primary)]/70"
+                scrolled ? "text-[var(--color-text-on-dark)] opacity-70" : "text-[var(--color-text-primary)] opacity-70"
               }`}
             >
               {item.label}

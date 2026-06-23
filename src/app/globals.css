@@ -57,13 +57,6 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: var(--color-accent);
-}
-a:hover {
-  color: var(--color-accent-hover);
-}
-
 html.lenis,
 html.lenis body {
   height: auto;

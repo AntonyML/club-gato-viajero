@@ -15,21 +15,21 @@ export default function Footer() {
           <ellipse cx="20" cy="27" rx="1.5" ry="1.2" fill="var(--color-blush)" />
         </svg>
 
-        <p className="font-display text-lg text-[var(--color-text-on-dark)]/70">
+        <p className="font-display text-lg text-[var(--color-text-on-dark)] opacity-70">
           Cinco sellos. Cinco recuerdos. Una sola maleta.
         </p>
 
-        <div className="mt-6 flex items-center justify-center gap-6 text-sm text-[var(--color-text-on-dark)]/50">
-          <a href="#inicio" className="transition-colors hover:text-[var(--color-blush)]">
+        <div className="mt-6 flex items-center justify-center gap-6 text-sm">
+          <a href="#inicio" className="text-[var(--color-text-on-dark)] opacity-50 transition-colors hover:text-[var(--color-blush)] hover:opacity-100">
             Inicio
           </a>
-          <a href="#playas" className="transition-colors hover:text-[var(--color-blush)]">
+          <a href="#playas" className="text-[var(--color-text-on-dark)] opacity-50 transition-colors hover:text-[var(--color-blush)] hover:opacity-100">
             Playas
           </a>
-          <a href="#galeria" className="transition-colors hover:text-[var(--color-blush)]">
+          <a href="#galeria" className="text-[var(--color-text-on-dark)] opacity-50 transition-colors hover:text-[var(--color-blush)] hover:opacity-100">
             Galería
           </a>
-          <a href="#reservas" className="transition-colors hover:text-[var(--color-blush)]">
+          <a href="#reservas" className="text-[var(--color-text-on-dark)] opacity-50 transition-colors hover:text-[var(--color-blush)] hover:opacity-100">
             Reservas
           </a>
         </div>
