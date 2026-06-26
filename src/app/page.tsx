@@ -10,6 +10,7 @@ import GallerySection from "@/components/layout/GallerySection";
 import ContactSection from "@/components/layout/ContactSection";
 import { Passport } from "@/components/passport/Passport";
 import { TravelProgressBar } from "@/components/progress/TravelProgressBar";
+import { AchievementManager } from "@/components/achievements/AchievementManager";
 import { BEACHES, TOTAL_BEACHES } from "@/data/beaches";
 
 function Journey() {
@@ -54,7 +55,9 @@ function Journey() {
 export default function Page() {
   return (
     <ScrollProvider>
-      <Journey />
+      <AchievementManager>
+        <Journey />
+      </AchievementManager>
     </ScrollProvider>
   );
 }

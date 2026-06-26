@@ -8,6 +8,7 @@ import { SpeechBubble } from "@/components/stitch/SpeechBubble";
 import { getGsap } from "@/lib/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { prefersReducedMotion } from "@/lib/motion";
+import { useAchievement } from "@/hooks/useAchievement";
 
 type Props = {
   beach: Beach;
@@ -37,6 +38,7 @@ export function BeachChapter({ beach, onUnlock }: Props) {
   const bubbleRef = useRef<HTMLDivElement | null>(null);
   const lineRef = useRef<HTMLSpanElement | null>(null);
   const unlockedRef = useRef(false);
+  const { play } = useAchievement();
 
   const preset = stateByVibe[beach.vibe];
   const activeLine = beach.stitchSays[preset.line];
@@ -151,6 +153,7 @@ export function BeachChapter({ beach, onUnlock }: Props) {
             if (unlockedRef.current) return;
             unlockedRef.current = true;
             onUnlock();
+            play(beach);
           },
         });
       }
